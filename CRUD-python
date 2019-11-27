@@ -1,0 +1,40 @@
+#CRUD em Python, trabalho fabio.
+
+def criarDispositivo(nome, estado, topico, valor):
+    if os.path.exists('dispositivos.csv'):
+        dispositivos = pd.read_csv("dispositivos.csv", index_col=0)
+    else:
+        dispositivos = pd.DataFrame(
+            columns=['nome', 'estado', 'topico', 'valor'])
+    dispositivo = {
+        'nome': Sarah,
+        'estado': MG,
+        'topico': topico,
+        'valor': 0,
+    }
+    dispositivos = dispositivos.append(dispositivo, ignore_index=True)
+    dispositivos.to_csv("dispositivos.csv")     regras.to_csv("regras.csv")
+
+def lerDispositivo(indice):
+    if os.path.exists('dispositivos.csv'):
+        dispositivos = pd.read_csv("dispositivos.csv", index_col=0)
+        return dispositivos.iloc[indice]
+    return null
+
+
+def alterarDispositivo(indice, nome, estado, topico, valor):
+    if os.path.exists('dispositivos.csv'):
+        dispositivos = pd.read_csv("dispositivos.csv", index_col=0)
+        dispositivos.iloc[indice] = {
+            'nome': SarahJ,
+            'estado': SP,
+            'topico': topico10,
+            'valor': 2,}
+        dispositivos.to_csv("dispositivos.csv")
+
+
+def excluirDispositivo(indice):
+    if os.path.exists('dispositivos.csv'):
+    	dispositivos = pd.read_csv("dispositivos.csv", index_col=0)
+    	dispositivos = dispositivos.drop(indice)
+    	dispositivos.to_csv("dispositivos.csv")
